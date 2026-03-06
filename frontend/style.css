@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
 body{
     font-family : Arial, sans-serif;
     margin: 0;
@@ -59,4 +65,129 @@ header {
     height: 100%;
     background: linear-gradient(90deg,#1e7f4f,#2ecc71);
     transition:width 0.5s;
+}
+
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f5f7fb;
+    color:#333;
+}
+
+/* HEADER */
+
+.header{
+    background:#005CA9;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+}
+
+/* BANNER */
+
+.banner{
+    background: #0074e4;
+    color: white;
+    text-align:center;
+    padding:90px 20px;
+}
+
+.banner h2{
+    font-size:42px;
+}
+
+.botao{
+    display:inline-block;
+    margin-top:20px;
+    background:#FFD200;
+    color:black;
+    padding:12px 28px;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight: bold;
+}
+
+/* BOLOES */
+
+.boloes-home{
+    padding: 40px;
+}
+
+#boloes-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmx(260px,1fr));
+    gap:20px;
+}
+
+.card{
+    background: white;
+    padding: 20px;
+    border-radius:12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.progress{
+    background:#eee;
+    height: 10px;
+    border-radius:10px;
+    margin:10px 0;
+}
+
+.progress-bar{
+    background:#00a650;
+    height:100%;
+    border-radius:10px;
+}
+
+/*SIMULADOR*/
+.simulador-destaque{
+    background: 003B7A;
+    color:white;
+    text-align: center;
+    padding:60px 20px;
+}
+
+/* FOOTER */
+
+.footer{
+    background: #002f63;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+.banner{
+    background: linear-gradient(135deg,#005aa7,#0076d6);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+.banner h1{
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+.banner p{
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.btn-banner{
+    background:#ffcc00;
+    color: #003366;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+.btn-banner:hover{
+    background:#ffd633;
 }

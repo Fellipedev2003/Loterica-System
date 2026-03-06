@@ -4,7 +4,14 @@ async function carregarBoloes() {
 
     const container = document.getElementById("boloes-container");
 
-    container.innerHTML = "<h2>TESTE FUNCIONANDO</h2>";
+//se na existir pagina nao faz nada// 
+    if(!container){
+        return;
+    }
+
+    container.innerHTML = "<h2>Carregando bolões...</h2>";
+
+    try{
 
     const response = await fetch("http://localhost:3001/boloes/ativos");
     const boloes = await response.json();
@@ -29,7 +36,7 @@ async function carregarBoloes() {
             <p>Data do sorteio: ${data}</p>
 
             <div class="barra-container">
-                <div class="barra-progresso" styke="width:${bolao.porcentagem_preenchida}%"></div>
+                <div class="barra-progresso" style="width:${bolao.porcentagem_preenchida}%"></div>
                 </div>
                 <p>${bolao.porcentagem_preenchida}% das cotas preenchidas</p>
             <button onclick="reservar('${bolao.titulo}')">
@@ -39,8 +46,12 @@ async function carregarBoloes() {
         </div>
         `;
     });
+} catch (error) {
+    console.error("Erro ao carregar bolões", error);
+    container.innerHTML="<p>Erro ao carregar bolões.</p>";
 }
 
+}
 function reservar(titulo){
 
     const mensagem = encodeURIComponent(`Olá, quero reservar 1 cota do bolão: ${titulo}`);
