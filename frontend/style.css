@@ -214,3 +214,22 @@ body{
     font-weight: bold;
     font-size: 16px;
 }
+/* BANNER PRINCIPAL */
+.banner{
+    width: 100%;
+    background:#005CA9;
+    display: flex;
+    justify-content: center;
+}
+.banner-container{
+    width: 100%;
+    max-width: 1400px;
+}
+.banner-container img {
+    width: 100%;
+    max-height: 420px;
+    height: auto;
+    display: block;
+    object-position: center;
+    object-fit: contain;
+}
