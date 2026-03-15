@@ -1,4 +1,4 @@
-const pool = require("./db");
+const pool = require("./config/db");
 
 const express = require("express");
 const cors = require("cors");
@@ -127,4 +127,15 @@ app.get("/boloes/ativos", async (req, res) => {
     console.error(error);
     res.status(500).json({ error: "Erro ao buscar bolões ativos"});
   }
+});
+
+
+app.use(cors());
+app.use(express.json());
+
+const boloesRoutes = require("./routes/boloes");
+
+app.use("/boloes", boloesRoutes);
+app.listen(3001, () => {
+  console.log("Servidor rodando na porta 3001");
 });
